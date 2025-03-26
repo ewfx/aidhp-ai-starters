@@ -1,0 +1,4 @@
+openai==0.10.2
+pymongo==3.12.1
+pinecone-client==2.0.0
+pytest==6.2.5
