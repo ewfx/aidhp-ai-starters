@@ -14,7 +14,7 @@
 ---
 
 ## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+The inspiration behind this project was to create a more interactive and intelligent system that leverages Large Language Models (LLMs) to provide better context-based recommendations for users. This system aims to solve the issue of users receiving irrelevant or low-quality responses by grading and refining LLM outputs based on user feedback, ensuring recommendations are improved iteratively. The goal is to enhance the overall user experience by using feedback loops, grading, and contextual prompts.
 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
@@ -24,37 +24,83 @@ A brief overview of your project and its purpose. Mention which problem statemen
 ![Screenshot 1](link-to-image)
 
 ## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+This project leverages Large Language Models (LLMs) to create a smart recommendation system that dynamically adds context to user prompts, grades the quality of responses, and improves over time using feedback loops. By integrating advanced tools like vector stores, context retrieval, and feedback persistence, the system continuously learns from user interactions to deliver high-quality, context-aware recommendations.
 
 ## ⚙️ What It Does
-Explain the key features and functionalities of your project.
+This project creates a recommendation system that:
+
+Dynamically adds relevant context to user prompts by accessing a Vector Store.
+
+Provides recommendations using LLMs (Large Language Models) and evaluates the quality of the response.
+
+Grades the recommendation for quality, rerunning the process with context or retries when necessary.
+
+Incorporates user feedback and stores both the feedback and the LLM thought process in a database.
+
+Continuously improves LLM responses based on feedback for future recommendations, making the system smarter over time.
+
+The entire process includes multiple steps of interaction between LLMs, Vector Stores, feedback handling, and user interaction to ensure high-quality results.
 
 ## 🛠️ How We Built It
-Briefly outline the technologies, frameworks, and tools used in development.
+The project was built using the following technologies and tools:
+
+Technologies:
+
+LangChain for controlling the flow between user input, LLMs, and the feedback system.
+
+LlamaIndex for adding relevant context from the Vector Store.
+
+FlowAI for managing the overall recommendation flow.
+
+Vector Stores:
+
+Pinecone as a popular alternative vector store.
+
+
+Database:
+
+MongoDB as the NoSQL database to store user feedback, LLM responses, and thought processes.
+
+LLMs:
+
+Integrated through OpenAI's GPT models and other models such as LLaMA.
 
 ## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+Some of the major challenges we faced during development were:
+
+Contextualization: Ensuring the system correctly retrieves relevant context for each user prompt was tricky due to the need for fast and accurate vector searches.
+
+Grading Recommendations: Developing a reliable and efficient mechanism to grade the quality of LLM responses to decide if retries or feedback loops are needed.
+
+Error Handling: Designing robust error-handling systems to manage failed recommendations and retries.
+
+Database Persistence: Structuring the MongoDB database to effectively store and retrieve thought processes for feedback, and ensuring scalability for large datasets.
+
+LLM Integration: Integrating various LLM models, ensuring security, and adapting to the different APIs provided by each LLM.
 
 ## 🏃 How to Run
 1. Clone the repository  
    ```sh
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/ewfx/aidhp-ai-starters.git
    ```
 2. Install dependencies  
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   pip install -r requirements.txt
    ```
 3. Run the project  
    ```sh
-   npm start  # or python app.py
+   python main.py
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Backend: Python
+- 🔹 LLMs: LLaMA
+- 🔹 Vector Store: Pinecone
+- 🔹 Database: MongoDB
 
 ## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+- Sharath Raghavendra 
+- Bhavya Kondapalli
+- Devendra Singh Daiya
+- Satyam Tiwari
+- Anjali Kumari
